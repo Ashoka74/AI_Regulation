@@ -2,7 +2,7 @@
 
 The same than previous application but as a Django app
 
-The app should work by itself, you just have to provide your OpenAI API and then enter the following command in the terminal from the folder path:
+The app should work by itself, you just have to  <strong> provide your OpenAI API </strong> and then enter the following command in the terminal from the folder path:
 
 <h3>
 manage.py runserver
