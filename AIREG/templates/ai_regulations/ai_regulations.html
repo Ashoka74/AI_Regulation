@@ -1,0 +1,95 @@
+
+<style>
+	.center {
+		margin: 0;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.center_page {
+		text-align:center;
+	}
+
+	.padding {
+		padding: 0px 0px 10px 0px;
+	}
+
+	input{
+		width: 70%;
+	}
+
+	.log_out {
+	text-align:right;
+	padding: 150px 0px 0px 100px;
+	}
+
+	.fixedButton{
+	position: fixed;
+	top: 500px;
+	bottom: 10px;
+	left: 700px;
+	right: 10px; 
+	padding: 20px;
+	}
+
+
+
+
+
+</style>
+
+
+
+
+<div class="center">
+
+	<div class="center_page">
+
+
+
+			
+
+		<br/>
+		<br>
+		<br/>
+		<h1>AI Regulator</h1>
+
+		
+		<p>
+			<h4>
+				GPT-3 powered self-regulating AI.
+			</h4>
+		</p>
+
+		
+		<br>
+		<br />
+
+	</div>
+
+		<p>
+			This AI-advisor is powered by GPT-3 and suggests risks and regulations for a given technology.
+		</p>
+		<br/>
+	<form method="POST" action="#">
+		{% csrf_token %} 
+		<input maxlength="250" type="text" placeholder="What technology do you want to regulate?" name="ai_regulations_input"/>
+		<button type="submit" value="submit" style= 'width:90px'>Send</button>
+	</form>
+	<br/>
+	<br/>
+
+	<div>
+		<p>
+			<strong>
+				{% if overallrisk and regulations %}
+				{% csrf_token %}
+				{{ overallrisk }}
+				{{ regulations }}
+				{% endif %}
+			</strong>
+		</p>
+		</div>
