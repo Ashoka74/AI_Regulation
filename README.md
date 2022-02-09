@@ -1,5 +1,7 @@
 # AI_Regulation
 
+ <a href="https://www.youtube.com/watch?v=hrmZ-crQKcU&ab_channel=MarcoFernandez">View Demo</a>
+
 The same than previous application but as a Django app
 
 The app should work by itself, you just have to  <strong> provide your OpenAI API </strong> and then enter the following command in the terminal from the folder path:
