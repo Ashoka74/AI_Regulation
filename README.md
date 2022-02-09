@@ -6,7 +6,8 @@
  
  
 
-The same than  <a href="https://github.com/Ashoka74/AI-Regulation-suggestions>this</a> application but as a Django app
+The same than 
+<a href="https://github.com/Ashoka74/AI-Regulation-suggestions>this</a> application but as a Django app
 
 The app should work by itself, you just have to <strong> provide your OpenAI API </strong> and then enter the following command in the terminal from the folder path:
 
