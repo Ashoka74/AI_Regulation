@@ -55,13 +55,13 @@
 		<br/>
 		<br>
 		<br/>
-		<h1>AI Regulator</h1>
+		<h1>AI Elon</h1>
 
 		
 		<p>
-			<h4>
-				GPT-3 powered self-regulating AI.
-			</h4>
+			<h2>
+				GPT-3 powered Elon Musk Chatbot
+			</h2>
 		</p>
 
 		
@@ -70,13 +70,12 @@
 
 	</div>
 
-		<p>
-			This AI-advisor is powered by GPT-3 and suggests risks and regulations for a given technology.
-		</p>
-		<br/>
+		<h4>
+			Hi there, I'm Elon AI. I'm a chatbot that will answer all your questions.
+		</h4>
 	<form method="POST" action="#">
 		{% csrf_token %} 
-		<input maxlength="250" type="text" placeholder="What technology do you want to regulate?" name="ai_regulations_input"/>
+		<input maxlength="250" type="text" placeholder="Your input" name="ai_regulations_input"/>
 		<button type="submit" value="submit" style= 'width:90px'>Send</button>
 	</form>
 	<br/>
@@ -84,12 +83,15 @@
 
 	<div>
 		<p>
-			<strong>
-				{% if overallrisk and regulations %}
+			
+				{% if answer and final_prompt and user_input %}
 				{% csrf_token %}
-				{{ overallrisk }}
-				{{ regulations }}
+				<h2>
+					User : {{user_input}} <br/> <br/>
+
+					Elon Musk : {{answer}}
+				</h2>
 				{% endif %}
-			</strong>
+	
 		</p>
 		</div>
